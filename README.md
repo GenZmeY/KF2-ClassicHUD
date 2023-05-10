@@ -48,5 +48,5 @@ If it's a crash issue, be sure to include the `Launch.log` files. You can find t
 Please note that these files are overwritten every time you start the game/server. Therefore, you must take these files immediately after the game crashes in order not to lose information.
 
 ## License
-* [GNU GPLv3](LICENSE) - **YetAnotherScoreboard**  
-* [GNU LGPLv3](https://github.com/GenZmeY/KF2-BoxPainterLib/blob/master/LICENSE) - **BoxPainterLib**  
+[![license](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](LICENSE)
+[![license](https://www.gnu.org/graphics/lgplv3-with-text-154x68.png)](https://github.com/GenZmeY/KF2-BoxPainterLib/blob/master/LICENSE)
