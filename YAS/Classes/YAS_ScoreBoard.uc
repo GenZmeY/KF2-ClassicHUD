@@ -1,6 +1,8 @@
 class YAS_ScoreBoard extends KFGUI_Page
 	dependson(YAS_Types);
 
+const LocalMessage = class'YAS_LocalMessage';
+
 const HeaderWidthRatio         = 0.30f;
 const PlayerListWidthRatio     = 0.6f;
 const PlayerEntryHeightMod     = 1.05f;
@@ -49,8 +51,6 @@ var KFPlayerController OwnerPC;
 
 var Color PingColor;
 var float PingBars;
-
-var localized String Players, Spectators;
 
 // Cache
 var public Array<YAS_RepInfoPlayer> RepInfos;
@@ -430,7 +430,9 @@ function DrawMenu()
 	*/
 
 	Canvas.SetDrawColorStruct(Settings.Style.PlayerCountTextColor);
-	S = Players $ ":" @ NumPlayer @ "/" @ KFGRI.MaxHumanCount $ "    " $ Spectators $ ": " $ NumSpec; ;
+	S = LocalMessage.static.GetLocalizedString(YAS_Players) $ ":"
+		@ NumPlayer @ "/" @ KFGRI.MaxHumanCount $ "    "
+		$ LocalMessage.static.GetLocalizedString(YAS_Spectators) $ ": " $ NumSpec; ;
 	Canvas.TextSize(S, XL, YL, FontScalar, FontScalar);
 	DrawTextShadowHLeftVCenter(S, BoxX + EdgeSize, YPos, BoxH, FontScalar);
 
